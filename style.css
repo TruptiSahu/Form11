@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-box {
+  width: 400px;
+  height: 700px;
+  background: url(./background.jpg) no-repeat center center/cover;
+  position: relative;
+  padding: 0px 50px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+
+.form-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #7f58b1;
+  opacity: 0.5;
+}
+
+.form-box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  opacity: 0.3;
+}
+
+.form-box__icon {
+  width: 90px;
+  height: 160px;
+  position: relative;
+  transform: rotate(45deg);
+  z-index: 1;
+}
+
+.form-box__icon::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background: linear-gradient(to right, #fff 0%, #ccc 100%);
+}
+
+.form-box__icon::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 30px;
+  height: 100%;
+  background: #fff;
+}
+
+.form {
+  z-index: 1;
+  width: 100%;
+}
+
+.form-list {
+  display: flex;
+  flex-flow: column;
+}
+
+.form-list__row {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 5px;
+}
+
+.form-list__row ion-icon {
+  font-size: 25px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-right: 20px;
+}
+
+.form-list__row input {
+  font-size: 16px;
+  background: transparent;
+  outline: none;
+  border: none;
+  padding: 10px;
+  flex: 1;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.form__btn {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 18px 0;
+  border-radius: 30px;
+  margin-top: 40px;
+  background: #F73D71;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.form__btn:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
